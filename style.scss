@@ -1,2 +1,6 @@
+@import "./sass/utils/_variables.scss";
+@import "./sass/utils/_mixins.scss";
 @import "./sass/base.scss";
-@import "./sass/layout/header.scss";
+@import "./sass/layouts/_header.scss";
+@import "./sass/layouts/_town.scss";
+@import "./sass/layouts/_reserve.scss";

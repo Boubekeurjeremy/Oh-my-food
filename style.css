@@ -10,12 +10,57 @@ body {
 
 header {
   text-align: center;
-  border-bottom: 1px solid lightgray;
-  box-shadow: 1px 1px 3px lightgray;
+  box-shadow: 0 0 0.6em #8a8a8a;
+  position: relative;
 }
 header img {
   height: 30px;
   margin: 1em 0 0.5em 0;
+}
+
+.town {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2em 0 0;
+  background: #dedede;
+}
+.town i {
+  margin: 0 0.7em 0.3em 0;
+  font-size: 20px;
+}
+.town p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.reserve {
+  text-align: center;
+  background: #ebebeb;
+  margin-top: -1.3em;
+}
+.reserve h1 {
+  padding-top: 2em;
+}
+.reserve p {
+  margin: -0.5em 0 2em 0;
+  font-weight: 250;
+}
+.reserve button {
+  margin-bottom: 4em;
+  padding: 1.2em 1.5em 1.2em 1.5em;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  background-image: linear-gradient(#fd72ff, #9356dc);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 3px 5px 3px #bdbdbd;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.reserve button:hover {
+  scale: 1.2;
 }
 
 /*# sourceMappingURL=style.css.map */
