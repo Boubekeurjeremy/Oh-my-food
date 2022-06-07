@@ -5,12 +5,12 @@
     padding:0 2em 0 0;
     background:darken($color-lightgray,7%);
     
-    i{
+    & i{
         margin:0 0.7em 0.3em 0;
         font-size:20px;
     }
     
-    p{
+    & p{
         font-weight:400;
         font-size:18px;
         }

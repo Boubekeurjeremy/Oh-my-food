@@ -37,10 +37,11 @@ header img {
 .reserve {
   text-align: center;
   background: #ebebeb;
-  margin-top: -1.3em;
+  margin-top: -1.8em;
 }
 .reserve h1 {
   padding-top: 2em;
+  font-size: 24px;
 }
 .reserve p {
   margin: -0.5em 0 2em 0;
@@ -52,15 +53,78 @@ header img {
   font-weight: bold;
   color: white;
   font-size: 14px;
-  background-image: linear-gradient(#fd72ff, #9356dc);
+  background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
   border-radius: 30px;
-  box-shadow: 0px 3px 5px 3px #bdbdbd;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  box-shadow: 0px 3px 4px 3px #cacaca;
 }
 .reserve button:hover {
   scale: 1.2;
+}
+
+@media (min-width: 768px) {
+  .operation {
+    margin: 0 0 0 2em;
+  }
+}
+.operation h2 {
+  padding: 1.5em 0 0.4em 0.8em;
+}
+.operation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 95%;
+  padding-bottom: 3.2em;
+}
+@media (min-width: 768px) {
+  .operation ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+.operation li {
+  list-style-type: none;
+  padding: 1.5em;
+  margin-left: -1em;
+  font-weight: 500;
+  background: #f8f8f8;
+  border-radius: 25px;
+  box-shadow: 0px 3px 4px 3px #f0f0f0;
+  cursor: pointer;
+}
+.operation li:hover {
+  background: #f2eafb;
+}
+@media (min-width: 768px) {
+  .operation li {
+    margin-right: 3%;
+  }
+}
+@media (min-width: 992px) {
+  .operation li {
+    flex-grow: 1;
+  }
+}
+.operation span {
+  margin-left: -2.8em;
+  color: white;
+  padding: 0.5em 0.6em 0.2em 0.6em;
+  background: #9356dc;
+  border-radius: 50px;
+  font-size: 12px;
+}
+.operation i {
+  padding-right: 1.2em;
+  margin-left: 1em;
+  font-size: 20px;
+  color: #717171;
+}
+.operation i:hover {
+  color: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */
