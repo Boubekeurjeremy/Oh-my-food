@@ -1,0 +1,87 @@
+
+.restaurant{
+    background:$color-lightgray;
+    & h2{
+      padding:2em 0 0.4em 0.7em; 
+      font-size:25px;
+      @media (min-width:$breakpoint-mobile){
+          margin-left:1.5em;
+      }
+    }
+    &__cards{
+        display:grid;
+        grid-template-columns:repeat(1,1fr);
+        gap:1.5em;
+        padding-left: 1em;
+        padding-bottom:4em;
+        
+        @media(min-width:$breakpoint-mobile){
+            grid-template-columns:repeat(2,1fr);
+            @include base-margin;
+        }
+    .new{
+        position:relative;
+    }
+    .new::before{
+        content:"Nouveau";
+        position: absolute;
+        height:2em;
+        width:5em;
+        background-color:$color-tertiary;
+        color:darken($color-tertiary,35%);
+        font-size:13px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        right:1em;
+        top:1em;
+    }
+    }
+    
+}
+.card{
+    box-shadow:3px 3px 5px darken($color-lightgray,10%);
+    background-color:white;
+    width:95%;
+    border-radius:20px;
+    &__image{
+        height:10em;
+        width:100%;
+        background-size:cover;
+        border-radius:20px 20px 0 0;
+        }
+    @for $i from 1 through 4{
+        &__image-#{$i}{
+            background-image:url(../../images/image-#{$i}.jpg);
+        }
+    }
+    &__description{
+        position:relative;
+        &::before{
+          @include heart; 
+        }
+        &::after{
+            @include heart;
+            font-weight:900;
+            opacity:0;
+        }
+&:hover::after{
+            @include heart;
+            font-weight:900;
+            opacity:1;
+           @include gradient-purple;
+        background-clip: text;
+    -webkit-text-fill-color: transparent;
+  scale:1.15;
+        }
+        
+    & h3{
+        margin:0.7em 0 0 1em;
+    }
+    & p{
+        margin:0.3em 0 0 1.2em;
+        font-weight:300;
+        padding-bottom:1em;
+    }
+    }
+}
