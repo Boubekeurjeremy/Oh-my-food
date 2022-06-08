@@ -16,6 +16,6 @@
 @mixin gradient-purple{
 background-image:linear-gradient($color-secondary,$color-primary);}
 @mixin base-margin{
-    margin:0 0 0 2em;
+    margin-left:2em;
 }
 
