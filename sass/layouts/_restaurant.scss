@@ -14,7 +14,6 @@
         gap:1.5em;
         padding-left: 1em;
         padding-bottom:4em;
-        
         @media(min-width:$breakpoint-mobile){
             grid-template-columns:repeat(2,1fr);
             @include base-margin;
@@ -44,37 +43,24 @@
     background-color:white;
     width:95%;
     border-radius:20px;
+    @media(min-width:$breakpoint-computer){
+        width:87%;
+    }
     &__image{
         height:10em;
         width:100%;
         background-size:cover;
         border-radius:20px 20px 0 0;
+        
         }
     @for $i from 1 through 4{
         &__image-#{$i}{
-            background-image:url(../../images/image-#{$i}.jpg);
+            background-image:url(images/image-#{$i}.jpg);
         }
     }
-    &__description{
-        position:relative;
-        &::before{
-          @include heart; 
-        }
-        &::after{
-            @include heart;
-            font-weight:900;
-            opacity:0;
-        }
-&:hover::after{
-            @include heart;
-            font-weight:900;
-            opacity:1;
-           @include gradient-purple;
-        background-clip: text;
-    -webkit-text-fill-color: transparent;
-  scale:1.15;
-        }
-        
+    &__heart{
+        @include heart-animation;}
+    &__description{    
     & h3{
         margin:0.7em 0 0 1em;
     }

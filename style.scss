@@ -1,5 +1,7 @@
 @import "./sass/utils/_variables.scss";
 @import "./sass/utils/_mixins.scss";
+@import "./sass/utils/_button.scss";
+@import "./sass/utils/_animations.scss";
 @import "./sass/base.scss";
 @import "./sass/layouts/_header.scss";
 @import "./sass/layouts/_town.scss";
@@ -8,5 +10,6 @@
 @import "./sass/layouts/_restaurant.scss";
 @import "./sass/layouts/_footer.scss";
 @import "./sass/layouts/_loader.scss";
-@import "./sass/layouts/menus.scss";
+@import "./sass/layouts/_title.scss";
+@import "./sass/layouts/_menus.scss";
 

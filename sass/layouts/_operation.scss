@@ -5,15 +5,17 @@
 padding:1.5em 0 0.4em 0.8em;
 }
 & ul{
-    display:flex;
+    display:grid;
+    grid-template-columns:repeat(1,1fr);
     flex-direction:column;
     gap:1.5em;
     width:95%;
     padding-bottom:3.2em;
 @media (min-width:$breakpoint-mobile) {
-    flex-direction:row;
-flex-wrap:wrap;
-width:100%;
+    grid-template-columns:repeat(2,1fr);
+}
+@media(min-width:$breakpoint-computer){
+    grid-template-columns:repeat(3,1fr);
 }}
 & li{
     list-style-type: none;
@@ -27,12 +29,12 @@ width:100%;
     &:hover{
         background:lighten($color-primary,35%);
     }
+    &:hover > i{
+        color:$color-primary;
+    }
     @media(min-width:$breakpoint-mobile){
-        margin-right:3%;
+        margin-right:6%;
         }
-@media(min-width:$breakpoint-computer ){
-    flex-grow:1;
-}
 }
 & span{
     margin-left:-2.8em;
@@ -47,8 +49,5 @@ width:100%;
     margin-left:1em;
     font-size:20px;
     color: darken($color-lightgray,50%);
-&:hover{
-    color:$color-primary;
-}
 }
     }
