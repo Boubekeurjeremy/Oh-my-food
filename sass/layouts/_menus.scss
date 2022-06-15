@@ -75,15 +75,15 @@ transition:margin-right 0.5s;
     display:grid;
     place-items:center;
      background-color:$color-tertiary;
-    padding:1.1em 0;
-    width:4.5em;
-    margin-right:-4.5em;
+    padding:1.4em 0;
+    width:3.5em;
+    margin-right:-3.5em;
     transition:margin-right 0.5s;
 & i{
     background:white;
     color:$color-tertiary;
-    font-size:20px;
-    padding:0.3em 0.4em;
+    font-size:17px;
+    padding:0.15em 0.25em;
     border-radius:50%;
 }}
   &__description:hover &__check i{
