@@ -476,6 +476,11 @@ footer .fa-handshake-angle {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.menu__item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .menu__item h2 {
   margin: 0 0 0.7em 1.2em;
   padding: 1em 0 0.7em 0;
@@ -591,6 +596,12 @@ footer .fa-handshake-angle {
 .button button:hover {
   transform: scale(1.1);
   background: linear-gradient(356deg, #a16be0, #ff93e1);
+}
+
+@media (min-width: 768px) {
+  .contact h2, .contact p {
+    margin-left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
