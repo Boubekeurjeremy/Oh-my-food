@@ -556,6 +556,14 @@ footer .fa-handshake-angle {
   font-weight: bold;
   transition: margin-right 0.5s;
 }
+.menu__price__item {
+  margin-left: auto;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+  font-weight: bold;
+  transition: margin-right 0.5s;
+  margin-top: 2.8em;
+}
 .menu__check {
   display: grid;
   place-items: center;
@@ -572,8 +580,34 @@ footer .fa-handshake-angle {
   padding: 0.15em 0.25em;
   border-radius: 50%;
 }
+.menu__check__item {
+  display: grid;
+  place-items: center;
+  background-color: #99e2d0;
+  padding: 1.4em 0;
+  width: 3.5em;
+  margin-right: -3.5em;
+  transition: margin-right 0.5s;
+  padding: 2.1em 0;
+}
+.menu__check__item i {
+  background: white;
+  color: #99e2d0;
+  font-size: 17px;
+  padding: 0.15em 0.25em;
+  border-radius: 50%;
+}
+.menu__description:hover .menu__check__item i {
+  animation: turn 0.4s ease-in-out;
+}
+.menu__description:hover .menu__check__item {
+  margin-right: 0;
+}
+.menu__description:hover .menu__price__item {
+  margin-right: 0.5em;
+}
 .menu__description:hover .menu__check i {
-  animation: turn 0.3s ease-in-out;
+  animation: turn 0.4s ease-in-out;
 }
 .menu__description:hover .menu__check {
   margin-right: 0;

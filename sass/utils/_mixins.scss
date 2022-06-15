@@ -38,7 +38,7 @@ background-image:linear-gradient($color-secondary,$color-primary);}
   transform: scale(1.15);
   transition:all 0.3s ease-in;
         }
-}
+    }
 @mixin heart-direction {right:2em;
 bottom:0.3em;}
 @mixin base-ellipsis{
@@ -46,3 +46,34 @@ bottom:0.3em;}
     text-overflow: ellipsis;
     overflow:hidden;   
 }
+@mixin check{
+display:grid;
+    place-items:center;
+     background-color:$color-tertiary;
+    padding:1.4em 0;
+    width:3.5em;
+    margin-right:-3.5em;
+    transition:margin-right 0.5s;}
+    
+@mixin check-icone{
+    background:white;
+    color:$color-tertiary;
+    font-size:17px;
+    padding:0.15em 0.25em;
+    border-radius:50%;}
+    @mixin price{
+        margin-left:auto;
+margin-top:1.5em;
+margin-right:1.5em;
+font-weight:bold;
+transition:margin-right 0.5s;
+    }
+    @mixin animation-check{
+        animation:turn 0.4s ease-in-out;
+    }
+    @mixin margin-check{
+        margin-right:0;
+    }
+    @mixin margin-price{
+        margin-right:0.5em;
+    }

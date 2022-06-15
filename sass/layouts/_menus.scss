@@ -65,36 +65,41 @@
     @include base-ellipsis;
 }
 &__price{
-margin-left:auto;
-margin-top:1.5em;
-margin-right:1.5em;
-font-weight:bold;
-transition:margin-right 0.5s;
+    @include price;
+}
+&__price__item{
+     @include price;
+     margin-top:2.8em;
 }
 &__check {
-    display:grid;
-    place-items:center;
-     background-color:$color-tertiary;
-    padding:1.4em 0;
-    width:3.5em;
-    margin-right:-3.5em;
-    transition:margin-right 0.5s;
-& i{
-    background:white;
-    color:$color-tertiary;
-    font-size:17px;
-    padding:0.15em 0.25em;
-    border-radius:50%;
-}}
+    @include check;
+    & i{
+      @include check-icone;}}  
+
+&__check__item{
+    @include check;
+    padding:2.1em 0;
+    & i{
+       @include check-icone;}
+}
+&__description:hover &__check__item i{
+   @include animation-check;
+}
+&__description:hover &__check__item{
+   @include margin-check;
+}
+&__description:hover &__price__item{
+   @include margin-price;
+}
   &__description:hover &__check i{
-    animation:turn 0.3s ease-in-out;
+    @include animation-check;
   }  
 
 &__description:hover &__check {
-    margin-right:0;
+    @include margin-check;
 }
 &__description:hover &__price{
-    margin-right:0.5em;
+    @include margin-price;
 }
 }
 .button{
