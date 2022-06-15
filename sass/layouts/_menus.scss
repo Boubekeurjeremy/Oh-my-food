@@ -26,7 +26,7 @@
             &::before{
                 content:"";
                 position:absolute;
-                width:50px;
+                width:42px;
                 border-bottom:3px solid $color-tertiary;
                 top:2.5em;
             }
@@ -44,7 +44,7 @@
      cursor:pointer;
     @include base-ellipsis;
     animation:appearance 0.5s both;
-    @for $i from 1 through 3{
+    @for $i from 1 through 4{
     &:nth-child(#{$i}){
     animation-delay:0.2s * $i;}
   }

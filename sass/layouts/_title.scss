@@ -34,7 +34,7 @@ object-fit:cover;
         }
         &__heart{
             cursor:pointer;
-            right:1em;
+            right:0.5em;
             top:-1.7em;   
         @include heart-animation;
         &__heart::before{
