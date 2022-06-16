@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style.scss style.css"
+    "sass": "sass --watch style.scss style.css",
+    "prefix":"postcss style.css --use autoprefixer -d prefix/css/auto.css"
   },
   "repository": {
     "type": "git",
@@ -11,6 +12,7 @@
   },
   "author": "Boubekeur Jeremy",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Boubekeurjeremy/Oh-my-food/issues"
   },

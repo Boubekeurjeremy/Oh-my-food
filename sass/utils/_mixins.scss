@@ -49,31 +49,20 @@ bottom:0.3em;}
 @mixin check{
 display:grid;
     place-items:center;
-     background-color:$color-tertiary;
-    padding:1.4em 0;
+     padding:1.5em 0;
     width:3.5em;
     margin-right:-3.5em;
-    transition:margin-right 0.5s;}
-    
-@mixin check-icone{
+    transition:margin-right 0.5s ;
+    background:$color-tertiary;
+& i{
     background:white;
     color:$color-tertiary;
     font-size:17px;
     padding:0.15em 0.25em;
-    border-radius:50%;}
-    @mixin price{
-        margin-left:auto;
-margin-top:1.5em;
-margin-right:1.5em;
-font-weight:bold;
-transition:margin-right 0.5s;
-    }
+    border-radius:50%;}}
     @mixin animation-check{
         animation:turn 0.4s ease-in-out;
     }
     @mixin margin-check{
         margin-right:0;
-    }
-    @mixin margin-price{
-        margin-right:0.5em;
     }

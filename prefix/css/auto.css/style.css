@@ -222,16 +222,16 @@ header img {
   border-radius: 20px 20px 0 0;
 }
 .card__image-1 {
-  background-image: url(images/image-#.jpg);
+  background-image: url(../../../images/image-1.jpg);
 }
 .card__image-2 {
-  background-image: url(images/image-#.jpg);
+  background-image: url(../../../images/image-2.jpg);
 }
 .card__image-3 {
-  background-image: url(images/image-#.jpg);
+  background-image: url(../../../images/image-3.jpg);
 }
 .card__image-4 {
-  background-image: url(images/image-#.jpg);
+  background-image: url(../../../images/image-4.jpg);
 }
 .card__heart {
   position: relative;
