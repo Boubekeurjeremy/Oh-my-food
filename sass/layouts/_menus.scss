@@ -75,7 +75,7 @@ transition:margin-right 0.5s;
 
 &__check__item{
     @include check;
-    padding:2.2em 0;
+    padding:2.3em 0;
 }
 &__description:hover &__check__item i{
    @include animation-check;

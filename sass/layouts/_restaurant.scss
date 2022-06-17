@@ -55,7 +55,7 @@
         }
     @for $i from 1 through 4{
         &__image-#{$i}{
-            background-image:url(images/image-#.jpg);
+            background-image:url(../../images/image-#.jpg);
         }
     }
     &__heart{
