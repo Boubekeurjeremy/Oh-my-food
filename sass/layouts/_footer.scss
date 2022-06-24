@@ -1,33 +1,33 @@
-footer{
-    margin-top:-1.2em;
-    background:darken($color-lightgray,70%);
-    color:white;
-    height:12em;
-   
-    & h2{
-        font-family:"shrikhand","sans-serif";
-        font-size:18px;
-        font-weight:400;
-        padding:1.2em 0 0 1.2em;
-        margin-bottom:1em;
-        @media(min-width:$breakpoint-mobile){
-            @include base-margin;
-          }
+footer {
+    margin-top: -1.2em;
+    background: darken($color-lightgray, 70%);
+    color: white;
+    height: 12em;
+
+    & h2 {
+        @include max-width;
+        margin: 0 auto;
+        font-family: "shrikhand", "sans-serif";
+        font-size: 18px;
+        font-weight: 400;
+        padding: 1.2em 0 0 1.2em;
+        margin-bottom: 1em;
     }
-   & p{
+
+    & p {
+        @include max-width;
         padding-left: 1.5em;
-        margin:0 0 0.5em 0;
-    font-size:15px;
-    @media(min-width:$breakpoint-mobile){
-      @include base-margin;
+        margin: 0 auto 0.5em auto;
+        font-size: 15px;
     }
-}
-    & .fa-utensils{
-        font-size:13px;
-        padding-right:0.8em;
+
+    & .fa-utensils {
+        font-size: 13px;
+        padding-right: 0.8em;
     }
-    & .fa-handshake-angle{
-        font-size:10px;
-        padding-right:1em;
+
+    & .fa-handshake-angle {
+        font-size: 10px;
+        padding-right: 1em;
     }
 }

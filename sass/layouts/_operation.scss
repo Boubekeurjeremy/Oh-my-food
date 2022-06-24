@@ -1,53 +1,65 @@
 .operation {
-    @media(min-width:$breakpoint-mobile){
-      @include base-margin; }
-    & h2{
-padding:1.5em 0 0.4em 0.8em;
-}
-& ul{
-    display:grid;
-    grid-template-columns:repeat(1,1fr);
-    flex-direction:column;
-    gap:1.5em;
-    width:95%;
-    padding-bottom:3.2em;
-@media (min-width:$breakpoint-mobile) {
-    grid-template-columns:repeat(2,1fr);
-}
-@media(min-width:$breakpoint-computer){
-    grid-template-columns:repeat(3,1fr);
-}}
-& li{
-    list-style-type: none;
-    padding:1.5em;
-    margin-left:-1em;
-    font-weight:500;
-    background:lighten($color-lightgray,3%);
-    border-radius:25px;
-    box-shadow:0px 3px 4px 3px $color-lightgray;
-    cursor:pointer;
-    &:hover{
-        background:lighten($color-primary,35%);
+   @include max-width;
+    @include margin-auto;
+
+    & h2 {
+        padding: 1.5em 0 0.4em 0.8em;
     }
-    &:hover > i{
-        color:$color-primary;
-    }
-    @media(min-width:$breakpoint-mobile){
-        margin-right:6%;
+
+    & ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+        gap: 1.5em;
+        width: 95%;
+        padding-bottom: 3.2em;
+
+        @media (min-width:$breakpoint-mobile) {
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
         }
-}
-& span{
-    margin-left:-2.8em;
-    color:white;
-    padding:0.5em 0.6em 0.2em 0.6em;
-    background:$color-primary;
-    border-radius:50px;
-    font-size:12px;
-}
-& i{
-    padding-right:1.2em;
-    margin-left:1em;
-    font-size:20px;
-    color: darken($color-lightgray,50%);
-}
+
+        @media(min-width:$breakpoint-computer) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
+
+    & li {
+        list-style-type: none;
+        padding: 1.5em;
+        margin-left: -1em;
+        font-weight: 500;
+        background: lighten($color-lightgray, 3%);
+        border-radius: 25px;
+        box-shadow: 0px 3px 4px 3px $color-lightgray;
+        cursor: pointer;
+
+        &:hover {
+            background: lighten($color-primary, 35%);
+        }
+
+        &:hover>i {
+            color: $color-primary;
+        }
+
+        @media(min-width:$breakpoint-mobile) {
+            margin-right: 6%;
+        }
+    }
+
+    & span {
+        margin-left: -2.8em;
+        color: white;
+        padding: 0.5em 0.6em 0.2em 0.6em;
+        background: $color-primary;
+        border-radius: 50px;
+        font-size: 12px;
+    }
+
+    & i {
+        padding-right: 1.2em;
+        margin-left: 1em;
+        font-size: 20px;
+        color: darken($color-lightgray, 50%);
+    }
+}

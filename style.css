@@ -10,7 +10,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes turn {
+@keyframes turn-item {
   from {
     transform: rotate(-270deg);
   }
@@ -99,10 +99,9 @@ header img {
   background: linear-gradient(356deg, #a16be0, #ff93e1);
 }
 
-@media (min-width: 768px) {
-  .operation {
-    margin-left: 2em;
-  }
+.operation {
+  max-width: 1500px;
+  margin: 0 auto;
 }
 .operation h2 {
   padding: 1.5em 0 0.4em 0.8em;
@@ -118,6 +117,7 @@ header img {
 @media (min-width: 768px) {
   .operation ul {
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
@@ -165,25 +165,25 @@ header img {
   background: #f0f0f0;
 }
 .restaurant h2 {
-  padding: 2em 0 0.4em 0.7em;
+  max-width: 1500px;
+  margin: 0 auto 1em auto;
+  padding: 2em 0 0.4em 0.8em;
   font-size: 25px;
 }
-@media (min-width: 768px) {
-  .restaurant h2 {
-    margin-left: 1.5em;
-  }
-}
 .restaurant__cards {
+  max-width: 1500px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1.5em;
-  padding-left: 1em;
+  padding: 0 1em 4em 1em;
   padding-bottom: 4em;
 }
 @media (min-width: 768px) {
   .restaurant__cards {
     grid-template-columns: repeat(2, 1fr);
-    margin-left: 2em;
+    padding-left: 1em;
+    place-items: center;
   }
 }
 .restaurant__cards .new {
@@ -207,7 +207,7 @@ header img {
 .card {
   box-shadow: 3px 3px 5px #d7d7d7;
   background-color: white;
-  width: 95%;
+  width: 100%;
   border-radius: 20px;
 }
 @media (min-width: 992px) {
@@ -303,26 +303,19 @@ footer {
   height: 12em;
 }
 footer h2 {
+  max-width: 1500px;
+  margin: 0 auto;
   font-family: "shrikhand", "sans-serif";
   font-size: 18px;
   font-weight: 400;
   padding: 1.2em 0 0 1.2em;
   margin-bottom: 1em;
 }
-@media (min-width: 768px) {
-  footer h2 {
-    margin-left: 2em;
-  }
-}
 footer p {
+  max-width: 1500px;
   padding-left: 1.5em;
-  margin: 0 0 0.5em 0;
+  margin: 0 auto 0.5em auto;
   font-size: 15px;
-}
-@media (min-width: 768px) {
-  footer p {
-    margin-left: 2em;
-  }
 }
 footer .fa-utensils {
   font-size: 13px;
@@ -355,6 +348,8 @@ footer .fa-handshake-angle {
 }
 
 .box {
+  max-width: 1500px;
+  margin: 0 auto;
   box-shadow: none;
 }
 .box i {
@@ -368,6 +363,10 @@ footer .fa-handshake-angle {
   transform: scale(1.2);
 }
 
+.image {
+  max-width: 1500px;
+  margin: 0 auto;
+}
 .image img {
   height: 35vh;
   width: 100%;
@@ -380,6 +379,8 @@ footer .fa-handshake-angle {
 }
 
 .title {
+  max-width: 1500px;
+  margin: 0 auto;
   background: whitesmoke;
   margin-top: -4.3em;
   border-radius: 45px 45px 0 0;
@@ -391,7 +392,7 @@ footer .fa-handshake-angle {
   font-size: 27px;
   padding-top: 1.2em;
   padding-bottom: 0.8em;
-  margin: 1em 0 1em 0.8em;
+  margin: 1em 0 1em 0.7em;
 }
 .title__heart {
   cursor: pointer;
@@ -460,6 +461,8 @@ footer .fa-handshake-angle {
 }
 
 .menu {
+  max-width: 1500px;
+  margin: 0 auto;
   margin-top: -2em;
 }
 @media (min-width: 768px) {
@@ -487,7 +490,7 @@ footer .fa-handshake-angle {
   overflow: hidden;
 }
 .menu__item h2 {
-  margin: 0 0 0.7em 1.2em;
+  margin: 0 0 0.7em 1.1em;
   padding: 1em 0 0.7em 0;
   text-transform: uppercase;
   font-weight: 300;
@@ -502,8 +505,9 @@ footer .fa-handshake-angle {
   top: 2.5em;
 }
 .menu__description {
-  margin: 0 0 1em 1em;
-  width: 93%;
+  max-width: 1500px;
+  margin: 0 auto 1em auto;
+  width: 95%;
   box-shadow: 3px 3px 5px #e3e3e3;
   background-color: white;
   border-radius: 15px;
@@ -529,16 +533,16 @@ footer .fa-handshake-angle {
 }
 .menu__description h3 {
   font-weight: 500;
-  padding: 0.7em 0 0 0.5em;
-  margin: 0 0 0.2em 0.5em;
+  padding: 0.7em 0 0 0;
+  margin: 0 1em 0.2em 0.5em;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .menu__description p {
   font-weight: 300;
-  margin: 0 0 0 0.5em;
-  padding: 0 0 0.7em 0.7em;
+  margin: 0 1em 0 0.5em;
+  padding: 0 0 0.7em 0.15em;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -570,31 +574,8 @@ footer .fa-handshake-angle {
   padding: 0.15em 0.25em;
   border-radius: 50%;
 }
-.menu__check__item {
-  display: grid;
-  place-items: center;
-  padding: 1.5em 0;
-  width: 3.5em;
-  margin-right: -3.5em;
-  transition: margin-right 0.5s;
-  background: #99e2d0;
-  padding: 2.3em 0;
-}
-.menu__check__item i {
-  background: white;
-  color: #99e2d0;
-  font-size: 17px;
-  padding: 0.15em 0.25em;
-  border-radius: 50%;
-}
-.menu__description:hover .menu__check__item i {
-  animation: turn 0.4s ease-in-out;
-}
-.menu__description:hover .menu__check__item {
-  margin-right: 0;
-}
 .menu__description:hover .menu__check i {
-  animation: turn 0.4s ease-in-out;
+  animation: turn-item 0.4s ease-in-out;
 }
 .menu__description:hover .menu__check {
   margin-right: 0;
@@ -625,12 +606,6 @@ footer .fa-handshake-angle {
 .button button:hover {
   transform: scale(1.1);
   background: linear-gradient(356deg, #a16be0, #ff93e1);
-}
-
-@media (min-width: 768px) {
-  .contact h2, .contact p {
-    margin-left: 0;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

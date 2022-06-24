@@ -1,68 +1,63 @@
-@mixin heart{
-    position:absolute;
+@mixin heart {
+    position: absolute;
     display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 free"; 
+    font-family: "Font Awesome 5 free";
     font-weight: 400;
     content: "\f004";
-    right:1.2em;
-    bottom:1.3em;
-    font-size:23px;
-    
+    right: 1.2em;
+    bottom: 1.3em;
+    font-size: 23px;
+
 }
-@mixin gradient-purple{
-background-image:linear-gradient($color-secondary,$color-primary);}
-@mixin base-margin{
-    margin-left:2em;
+
+@mixin gradient-purple {
+    background-image: linear-gradient($color-secondary, $color-primary);
 }
-@mixin heart-animation{
-    position:relative;
-        &::before{
-          @include heart; 
-        }
-        &::after{
-            @include heart;
-            font-weight:900;
-            opacity:0;
-        }
-&:hover::after{
-            @include heart;
-            font-weight:900;
-            opacity:1;
-           @include gradient-purple;
+
+@mixin heart-animation {
+    position: relative;
+
+    &::before {
+        @include heart;
+    }
+
+    &::after {
+        @include heart;
+        font-weight: 900;
+        opacity: 0;
+    }
+
+    &:hover::after {
+        @include heart;
+        font-weight: 900;
+        opacity: 1;
+        @include gradient-purple;
         -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  transform: scale(1.15);
-  transition:all 0.3s ease-in;
-        }
+        -webkit-text-fill-color: transparent;
+        transform: scale(1.15);
+        transition: all 0.3s ease-in;
     }
-@mixin heart-direction {right:2em;
-bottom:0.3em;}
-@mixin base-ellipsis{
-    white-space:nowrap;   
-    text-overflow: ellipsis;
-    overflow:hidden;   
 }
-@mixin check{
-display:grid;
-    place-items:center;
-     padding:1.5em 0;
-    width:3.5em;
-    margin-right:-3.5em;
-    transition:margin-right 0.5s ;
-    background:$color-tertiary;
-& i{
-    background:white;
-    color:$color-tertiary;
-    font-size:17px;
-    padding:0.15em 0.25em;
-    border-radius:50%;}}
-    @mixin animation-check{
-        animation:turn 0.4s ease-in-out;
-    }
-    @mixin margin-check{
-        margin-right:0;
-    }
+
+@mixin heart-direction {
+    right: 2em;
+    bottom: 0.3em;
+}
+
+@mixin base-ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin max-width {
+    max-width: 1500px;
+}
+
+@mixin margin-auto {
+    margin: 0 auto;
+}

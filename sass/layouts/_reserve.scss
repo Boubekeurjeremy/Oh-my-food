@@ -1,16 +1,19 @@
-.reserve{
-    text-align:center;
-    background:darken($color-lightgray,2%);
-    margin-top:-1.8em;
-    & h1{
-      padding-top:2em;  
-    font-size:24px;}
-    
-    & p{
-        margin:-0.5em 0 2em 0;
-        font-weight: 250;}
-    
-    & button{
+.reserve {
+    text-align: center;
+    background: darken($color-lightgray, 2%);
+    margin-top: -1.8em;
+
+    & h1 {
+        padding-top: 2em;
+        font-size: 24px;
+    }
+
+    & p {
+        margin: -0.5em 0 2em 0;
+        font-weight: 250;
+    }
+
+    & button {
         @include button-purple;
     }
 }

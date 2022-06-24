@@ -1,108 +1,129 @@
-.menu{
-    margin-top:-2em;
-    @media(min-width:$breakpoint-mobile){
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    display:block;
+.menu {
+    @include max-width;
+    @include margin-auto;
+    margin-top: -2em;
+
+    @media(min-width:$breakpoint-mobile) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        display: block;
     }
 
 
-&__columns{
-    background:lighten($color-lightgray,2%);
-    @include base-ellipsis;
-    @media(min-width:$breakpoint-mobile){
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-}}
-&__item{
-    @include base-ellipsis;
-        & h2{
-            margin:0 0 0.7em 1.2em;
-            padding:1em 0 0.7em 0;
-            text-transform: uppercase;
-            font-weight:300;
-            position:relative;
-            font-size:17px;
-            &::before{
-                content:"";
-                position:absolute;
-                width:42px;
-                border-bottom:3px solid $color-tertiary;
-                top:2.5em;
-            }
-        }
-    }
-    &__description{
-        margin:0 0 1em 1em;
-        width:93%;
-        box-shadow:3px 3px 5px darken($color-lightgray,5%);
-        background-color:white;
-        border-radius:15px;
-        display:flex;
-     align-items:center;
-     cursor:pointer;
-    @include base-ellipsis;
-    animation:appearance 0.5s both;
-    @for $i from 1 through 4{
-    &:nth-child(#{$i}){
-    animation-delay:0.2s * $i;}
-  }
-     & h3{
-        font-weight:500;
-        padding:0.7em 0 0 0.5em;
-         margin:0 0 0.2em 0.5em;
+    &__columns {
+        background: lighten($color-lightgray, 2%);
         @include base-ellipsis;
-            }
-          & p{
-            font-weight:300;
-            margin:0 0 0 0.5em;   
-           padding:0 0 0.7em 0.7em;   
-             @include base-ellipsis;
-          }  
-        }
-&__script{
-    @include base-ellipsis;
-}
-&__price{
-    align-self:flex-end;
-    margin:0 1.5em 0.7em auto;
-font-weight:bold;
-transition:margin-right 0.5s;
-}
-&__check {
-    @include check;
-} 
 
-&__check__item{
-    @include check;
-    padding:2.3em 0;
+        @media(min-width:$breakpoint-mobile) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__item {
+        @include base-ellipsis;
+
+        & h2 {
+            margin: 0 0 0.7em 1.1em;
+            padding: 1em 0 0.7em 0;
+            text-transform: uppercase;
+            font-weight: 300;
+            position: relative;
+            font-size: 17px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 42px;
+                border-bottom: 3px solid $color-tertiary;
+                top: 2.5em;
+            }
+        }
+    }
+
+    &__description {
+        @include max-width;
+        margin: 0 auto 1em auto;
+        width: 95%;
+        box-shadow: 3px 3px 5px darken($color-lightgray, 5%);
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include base-ellipsis;
+        animation: appearance 0.5s both;
+
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                animation-delay: 0.2s * $i;
+            }
+        }
+
+        & h3 {
+            font-weight: 500;
+            padding: 0.7em 0 0 0;
+            margin: 0 1em 0.2em 0.5em;
+            @include base-ellipsis;
+        }
+
+        & p {
+            font-weight: 300;
+            margin: 0 1em 0 0.5em;
+            padding: 0 0 0.7em 0.15em;
+            @include base-ellipsis;
+        }
+    }
+
+    &__script {
+        @include base-ellipsis;
+    }
+
+    &__price {
+        align-self: flex-end;
+        margin: 0 1.5em 0.7em auto;
+        font-weight: bold;
+        transition: margin-right 0.5s;
+    }
+
+    &__check {
+        display: grid;
+        place-items: center;
+        padding: 1.5em 0;
+        width: 3.5em;
+        margin-right: -3.5em;
+        transition: margin-right 0.5s;
+        background: $color-tertiary;
+
+        & i {
+            background: white;
+            color: $color-tertiary;
+            font-size: 17px;
+            padding: 0.15em 0.25em;
+            border-radius: 50%;
+        }
+    }
+
+    &__description:hover &__check i {
+        animation: turn-item 0.4s ease-in-out;
+    }
+
+    &__description:hover &__check {
+        margin-right: 0;
+    }
+
+    &__description:hover &__price {
+        margin-right: 0.5em;
+    }
 }
-&__description:hover &__check__item i{
-   @include animation-check;
-}
-&__description:hover &__check__item{
-   @include margin-check;
-}
-  &__description:hover &__check i{
-    @include animation-check ;
-  }  
-&__description:hover &__check {
-    @include margin-check;
-}
-&__description:hover &__price{
-     margin-right:0.5em;}
-}
-.button{
-    text-align:center;
-    background:lighten($color-lightgray,3%);
-    & button{
-        margin-top:2.5em;
+
+.button {
+    text-align: center;
+    background: lighten($color-lightgray, 3%);
+
+    & button {
+        margin-top: 2.5em;
         @include button-purple;
-padding:1.2em 3.5em;}
+        padding: 1.2em 3.5em;
+    }
 }
-.contact{
-    & h2,& p{
-    @media(min-width:$breakpoint-mobile){
-   margin-left:0;
-    
-   } }}
